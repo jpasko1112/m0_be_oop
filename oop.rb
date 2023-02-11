@@ -4,6 +4,22 @@
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
 
+class Unicorn
+    def initialize(name)
+        @color = "silver"
+        @name = name
+        @say = "hi"
+    end
+
+    def change_say(new_say)
+    @say = new_say
+    end
+end
+
+Uni = Unicorn.new("Alfred")
+p Uni
+Uni.change_say("*~*hi*~*")
+p Uni
 
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
