@@ -4,22 +4,22 @@
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
 
-# class Unicorn
-#     def initialize(name)
-#         @color = "silver"
-#         @name = name
-#         @say = "hi"
-#     end
+class Unicorn
+    def initialize(name)
+        @color = "silver"
+        @name = name
+        @say = "hi"
+    end
 
-#     def change_say(new_say)
-#     @say = new_say
-#     end
-# end
+    def say(new_say)
+        "*~*{new_say}*~*"
+    end
+end
 
-# Uni = Unicorn.new("Alfred")
-# p Uni
-# Uni.change_say("*~*hi*~*")
-# p Uni
+Uni = Unicorn.new("Alfred")
+p Uni
+p Uni.say("hi")
+
 
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
@@ -27,23 +27,23 @@
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
 
-# class Vampire
-#     def initialize(name, pet = "bat")
-#         @name = name
-#         @pet = pet
-#         @thirsty = true
-#     end
+class Vampire
+    def initialize(name, pet = "bat")
+        @name = name
+        @pet = pet
+        @thirsty = true
+    end
 
-#     def drink
-#         @thirsty = false
-#     end
-# end
+    def drink
+        @thirsty = false
+    end
+end
 
-# Vampire1 = Vampire.new("Simon", "hamster")
-# p Vampire1
+Vampire1 = Vampire.new("Simon", "hamster")
+p Vampire1
 
-# Vampire1.drink
-# p Vampire1
+Vampire1.drink
+p Vampire1
 
 
 
@@ -54,25 +54,25 @@
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
-# class Dragon
-#     attr_reader :name, :rider, :color, :is_hungry, :counter
-#     def initialize(name, rider, color)
-#         @name = name
-#         @rider = rider
-#         @color = color
-#         @is_hungry = true
-#         @counter = 0
-#     end
+class Dragon
+    attr_reader :name, :rider, :color, :is_hungry, :counter
+    def initialize(name, rider, color)
+        @name = name
+        @rider = rider
+        @color = color
+        @is_hungry = true
+        @counter = 0
+    end
 
-#     def eat
-#         @counter += 1
-#         @is_hungry = false if @counter >= 4
-#     end
-# end
+    def eat
+        @counter += 1
+        @is_hungry = false if @counter >= 4
+    end
+end
 
-# drag1 = Dragon.new("Wigginisworth", "Cedric", "Yellow")
-# 4.times {drag1.eat}
-# p drag1
+drag1 = Dragon.new("Wigginisworth", "Cedric", "Yellow")
+4.times {drag1.eat}
+p drag1
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
